@@ -1,3 +1,8 @@
+# Non-Template Additional Files
+.DS_Store
+DS_Store
+exclude/
+
 # Logs
 logs
 *.log
