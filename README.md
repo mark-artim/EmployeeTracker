@@ -7,7 +7,7 @@ This application allows a user to maintain an emplyee database stored on server.
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Sample of the Employee Tracker application:<br><br>
-![Employee Tracker Sample Page](./TheApp.jpeg)
+![Employee Tracker Sample Page](./TheApp.jpg)
 
 ## Table of Contents
 - [Installation](#installation)
@@ -23,7 +23,7 @@ Github repsitory [NoteTaker](https://github.com/mark-artim/EmpTracker)
 
 ## Usage
 
-This application is straightforward. Navigate teh main menu and press enter on your selection.  Results will appear for viewing information or additional prompts will appear when adding new information. You can do the following:
+This application is straightforward. Navigate the main menu and press enter on your selection.  Results will appear for viewing information or additional prompts will appear when adding new information. You can do the following:
 - You are able to view all employees.
 - You are able to add a new employee.
 - You are able to view all departments.
