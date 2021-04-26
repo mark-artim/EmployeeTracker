@@ -1,0 +1,25 @@
+{
+  "name": "employeetracker",
+  "version": "1.0.0",
+  "description": "Employee Tracker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark-artim/EmployeeTracker.git"
+  },
+  "author": "MArk Artim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mark-artim/EmployeeTracker/issues"
+  },
+  "homepage": "https://github.com/mark-artim/EmployeeTracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.0.0",
+    "mysql2": "^2.2.5"
+  }
+}
