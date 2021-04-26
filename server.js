@@ -20,7 +20,8 @@ async function connection() {
         var listAllEmployees = await connect.query('SELECT * FROM employee');
         async function listAllDepartments() {
             var allDepts = await connect.query('SELECT * FROM department');
-            return allDepts
+            console.log("allDepts: "+allDepts[0]);
+            return allDepts[0]
         };
         var listAllRoles = await connect.query('SELECT * FROM role');
         console.log("Roles: " + listAllRoles[0]);
