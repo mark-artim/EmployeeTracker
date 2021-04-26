@@ -17,12 +17,13 @@ async function connection() {
             database: 'emptracker_db',
           });
 
-        var listAllEmployees = await connect.query('SELECT * FROM employee');
-        async function listAllDepartments() {
-            var allDepts = await connect.query('SELECT * FROM department');
-            console.log("allDepts: "+allDepts[0]);
-            return allDepts[0]
-        };
+        var listAllEmployees = await connect.query('SELECT e.id, e.first_name, e.last_name, role.title, department.deptname, role.salary, CONCAT(m.first_name,\' \', m.last_name) AS \'Manager\' FROM employee e LEFT JOIN role ON role_id = role.id INNER JOIN department ON role.department_id = department.id INNER JOIN employee m ON e.manager_id = m.id');
+        // async function listAllDepartments() {
+        var listAllDepartments = await connect.query('SELECT * FROM department');
+        //     console.log("allDepts: "+allDepts[0]);
+        //     return allDepts[0]
+        // };
+
         var listAllRoles = await connect.query('SELECT * FROM role');
         console.log("Roles: " + listAllRoles[0]);
         const testRoles = await connect.query('SELECT JSON_ARRAYAGG(title) AS "roles" FROM role');
@@ -31,7 +32,7 @@ async function connection() {
         var roleChoices = testRoles2[0].roles;
         console.log("roleChocies: "+roleChoices);
 
-        //miserable fucking Inquirer code:
+        //miserable Inquirer code:
         // MAIN MENU INQUIRER
         const menu = ["View All Employees","Add Employee","View All Departments","Add a Department","View All Roles","Add a Role","View All Managers","Exit Program"];
         const prompts = [
@@ -104,11 +105,18 @@ async function connection() {
             deptChoices2.forEach(addChoice)
             function addChoice() {
                 deptChoices.push(deptChoices2[0].TextRow.deptName);
-                console.log("fuckoff: "+deptChoices);
+                console.log("deptChioces: "+deptChoices);
             }
         }
         // }  
-
+        function listEmployees() {
+            inquirer.prompt(addEmpPrompts)
+            .then((response) => {
+                const addEmp = connect.query('INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)',[response.firstName, response.lastName, response.roleId, response.managerId]);
+                console.log('New employee record added.');
+                mainMenu(); 
+            });                      
+        };
 
         function addEmployee() {
             inquirer.prompt(addEmpPrompts)
@@ -158,7 +166,7 @@ async function connection() {
                         break;
                     case 'View All Departments':
                         console.log(response.menuChoice);
-                        console.table(listAllDepartments());
+                        console.table(listAllDepartments[0]);
                         mainMenu();
                         break;
                     case 'Add a Department':

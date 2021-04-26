@@ -50,7 +50,7 @@ Once you fire up your terminal and navigate to the correct directory: <br><br>
 
 
 ## How to Contribute
-If you fell web pages are a passing fad and terminal applications are making a comeback then feel free to fork and make pull requests.
+If you feel web pages are a passing fad and terminal applications are making a comeback then feel free to fork and make pull requests.
 
 ## Tests
 **There are no unit or other tests for this project**<BR>
