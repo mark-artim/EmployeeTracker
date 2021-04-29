@@ -7,7 +7,7 @@ This application allows a user to maintain an emplyee database stored on server.
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Sample of the Employee Tracker application:<br><br>
-![Employee Tracker Sample Page](./TheApp.jpg)
+![Employee Tracker Sample Page](./screenshot2.jpg)
 
 ## Table of Contents
 - [Installation](#installation)
@@ -32,6 +32,9 @@ This application is straightforward. Navigate the main menu and press enter on y
 - You are able to add a new role.
 
 <br>
+See the Employee Tracker in action in this how to video:<br><br>
+[INSTRUCTIONAL VIDEO - USING THE TOOL](https://drive.google.com/file/d/1LeVSaMwIy2VqG7YRTR0AmTv6F36mGuYw/view)
+
 
 ## Credits
 I credit noone for the ill-prepartion for this project.
