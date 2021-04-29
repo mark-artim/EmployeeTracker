@@ -37,7 +37,7 @@ See the Employee Tracker in action in this how to video:<br><br>
 
 
 ## Credits
-I credit noone for the ill-prepartion for this project.
+Mim Armand was instrumental in educating me on the sometimes painful nuances that allowed this command line tool to talk to MySql.
 
 ## License
 MIT
